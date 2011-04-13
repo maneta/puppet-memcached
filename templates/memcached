@@ -1,6 +1,0 @@
-PORT="<%= memcached_port %>"
-USER="memcached"
-MAXCONN="1024"
-CACHESIZE="<%= memcached_cachesize %>"
-OPTIONS=""
-
