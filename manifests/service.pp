@@ -7,6 +7,6 @@ class memcached::service {
 		enable     => true,
 		hasrestart => true,
 		hasstatus  => true,
-		require    => Class['memcached::config']
+		require    => Class['memcached::config'],
 	}
 }

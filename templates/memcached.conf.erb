@@ -35,7 +35,7 @@ logfile <%= scope.lookupvar('memcached::params::logfile') %>
 # Specify which IP address to listen on. The default is to listen on all IP addresses
 # This parameter is one of the only security measures that memcached has, so make sure
 # it's listening on a firewalled interface.
--l <%= scope.lookupvar('memcached::params::address') %>
+-l <%= scope.lookupvar('memcached::params::listen_on') %>
 
 # Limit the number of simultaneous incoming connections. The daemon default is 1024
 -c <%= scope.lookupvar('memcached::params::max_conn') %>
