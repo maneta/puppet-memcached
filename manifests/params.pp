@@ -5,7 +5,7 @@ class memcached::params {
 	# TODO: refactor this var to a common module and make other module use it
 	$os_suffix = $operatingsystem ? {
 		/(?i)(Debian|Ubuntu)/ => 'debian',
-		/(?i)(RedHat|CentOS)/ => 'redhat',
+		/(?i)(RedHat|CentOS|Linux)/ => 'redhat',
 	}
 	
 	# The port we listen to (default is 11211)
@@ -17,7 +17,7 @@ class memcached::params {
 	# The user which run under
 	$user = $operatingsystem ? {
 		/(?i)(Debian|Ubuntu)/ => 'nobody',
-		/(?i)(RedHat|CentOS)/ => 'memcached',
+		/(?i)(RedHat|CentOS|Linux)/ => 'memcached',
 	}
 	
 	# The max number of simultaneous incoming connections. The daemon default is 1024.
